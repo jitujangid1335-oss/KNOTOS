@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KNOTOS | Debug</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="screen-start" class="card">
+            <h1 class="logo">KNOTOS</h1>
+            <p class="tag">DEBUG MODE ACTIVE</p>
+            <input type="text" id="main-email" placeholder="Type admin">
+            <button onclick="handleInitialContinue()">Continue</button>
+            <div class="alt-options">
+                <button class="text-btn" onclick="toggleView(\"screen-start\", \"screen-id-login\")">Login</button>
+            </div>
+        </div>
+
+        <div id="screen-otp" class="card hidden">
+            <h2>VERIFY</h2>
+            <p class="tag" id="otp-status"></p>
+            <input type="text" id="otp-input" placeholder="Type 123">
+            <button onclick="verifyOTP()">Verify</button>
+        </div>
+
+        <div id="screen-setup" class="card hidden">
+            <h2>SETUP</h2>
+            <input type="text" id="user-name" placeholder="Name 1">
+            <input type="text" id="partner-name" placeholder="Name 2">
+            <label>Dates</label>
+            <input type="date" id="date-off">
+            <input type="date" id="date-sec">
+            <input type="password" id="reg-pass" placeholder="Password (456)">
+            <button onclick="createKnotAccount()">Finish</button>
+        </div>
+
+        <div id="screen-bees" class="card hidden">
+            <div class="bee">🐝</div>
+            <h1 id="final-id">---</h1>
+            <button onclick="location.reload()">Done</button>
+        </div>
+
+        <div id="screen-id-login" class="card hidden">
+            <h2>LOGIN</h2>
+            <input type="text" id="log-id" placeholder="ID">
+            <input type="password" id="log-pass" placeholder="Pass">
+            <button onclick="loginUser()">Enter</button>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

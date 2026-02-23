@@ -1,0 +1,14 @@
+
+:root { --p: #7d5fff; }
+body { margin:0; height:100vh; display:flex; justify-content:center; align-items:center; background:#050505; font-family:sans-serif; color:white; overflow:hidden; }
+.card { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.1); padding:40px; border-radius:30px; text-align:center; width:300px; backdrop-filter:blur(20px); box-shadow:0 20px 50px rgba(0,0,0,0.5); }
+.hidden { display:none !important; }
+.logo { letter-spacing:10px; font-weight:100; margin-bottom:10px; }
+.tag { font-size:0.6rem; color:gray; letter-spacing:2px; margin-bottom:20px; }
+input { width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:12px; color:white; margin-bottom:10px; box-sizing:border-box; outline:none; text-align:center; }
+button { width:100%; background:white; color:black; border:none; padding:12px; border-radius:12px; font-weight:bold; cursor:pointer; margin-top:10px; }
+.text-btn { background:none; color:gray; font-size:0.7rem; text-decoration:underline; margin-top:10px; }
+label { display:block; text-align:left; font-size:0.6rem; color:var(--p); margin: 5px 0; }
+.bee { font-size:3rem; animation: buzz 2s infinite; }
+@keyframes buzz { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+
